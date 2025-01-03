@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-Time Leaderboard</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .leaderboard {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .leaderboard th, .leaderboard td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .leaderboard th {
+            background-color: #f0f0f0;
+        }
+
+        .sort-btn {
+            font-size: 16px;
+            color: #000;
+            background-color: #e0e0e0;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .sort-btn:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>LOGICA Leetcode Contest</div>
+        <div>
+            <a href="#">Contest</a>
+            <a href="#">Leaderboard</a>
+            <a href="#">Archives</a>
+            <a href="#">About</a>
+            <a href="#">Feedback</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>All-Time Leaderboard <button class="sort-btn">Sort by</button></h1>
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Participants</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC</td>
+                    <td>Adrian</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

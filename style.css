@@ -1,0 +1,190 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* header */
+header {
+    background-color: #4CAF50; 
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #3a9a43;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    background-color: #4CAF50; /* green background for contrast */
+}
+
+nav img {
+    max-width: 100px; 
+    height: auto; 
+    margin-right: 1rem; 
+}
+
+/* navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 0;
+    padding: 0;
+    /* padding: 25px; */
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 1rem;
+    font-weight: 600; 
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+
+    /* text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease; */
+}
+
+nav ul li a:hover {
+    background-color: #3a9a43; /* darker green on hover */
+    color: #ffffff;
+    transform: scale(1.1); 
+}
+
+/* style for the current page link */
+nav ul li a.active {
+    background-color: white;
+    color: #4CAF50;
+    font-weight: 600;
+    border: 2px solid #3a9a43;
+    border-radius: 10px;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.leaderboard {
+    width: 60%;
+}
+
+.leaderboard h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.leaderboard user-name{
+    text-align: center;
+}
+
+#sortButton {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.team-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #eaeaea;
+    border-radius: 5px;
+}
+
+.current-contest {
+    width: 35%;
+}
+
+.current-contest h1 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.action-button, .info-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.action-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.info-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.action-button:hover, .info-button:hover {
+    opacity: 0.9;
+}
+
+/* back button */
+.back {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 40px;
+}

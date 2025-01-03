@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Group - LOGICA Leetcode Contest</title>
+    <style>
+        /* body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* header */
+        header {
+            background-color: #4CAF50; 
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #3a9a43;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* navbar */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+            background-color: #4CAF50; /* green background for contrast */
+        }
+
+        nav img {
+            max-width: 100px; 
+            height: auto; 
+            margin-right: 1rem; 
+        }
+
+        /* navbar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+            margin: 0;
+            padding: 0;
+            /* padding: 25px; */
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white; 
+            font-size: 1rem;
+            font-weight: 600; 
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+
+            /* text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease; */
+        }
+
+        nav ul li a:hover {
+            background-color: #3a9a43; /* darker green on hover */
+            color: #ffffff;
+            transform: scale(1.1); 
+        }
+
+        /* style for the current page link */
+        nav ul li a.active {
+            background-color: white;
+            color: #4CAF50;
+            font-weight: 600;
+            border: 2px solid #3a9a43;
+            border-radius: 10px;
+        }
+
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            margin-top: 338px;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Images/LOGICA_White.png" alt="LOGICA_Black">
+            <ul>
+                <li><a href="home.html" class="active">Contest</a></li>
+                <li><a href="allTimeLeaderboard.html">All-Time Leaderboard</a></li>
+                <li><a href="archives.html">Archives</a></li>
+                <li><a href="infoLogica.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="entry-section">
+            <h1>LOGICA Leetcode Contest</h1> <br><br>
+            <form action="problems.html">
+                <center>
+                    <label for="name">Enter Group ID:</label>
+                    <input type="text" id="gid" name="Group ID" required>
+                </center> <br><br><br>
+                <center><button class="submit" style="background-color: #000; display: block; width: 110px;" onclick="window.location.href='#';">Enter</button></center>
+            </form>
+        </section>
+    </main>
+
+    <div class="back-button">
+        <center><button class="back" style="display: block; width: 110px;" onclick="window.location.href='home.html';">Back</button></center>
+    </div>
+
+    <!-- <footer>
+        <p>© Spring 2025 LOGICA Leetcode Contest</p>
+    </footer> -->
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About LOGICA - LOGICA Leetcode Contest</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50; 
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #3a9a43;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* navbar */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+            background-color: #4CAF50; /* green background for contrast */
+        }
+
+        nav img {
+            max-width: 100px; 
+            height: auto; 
+            margin-right: 1rem; 
+        }
+
+        /* navbar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+            margin: 0;
+            padding: 0;
+            /* padding: 25px; */
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white; 
+            font-size: 1rem;
+            font-weight: 600; 
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+
+            /* text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease; */
+        }
+
+        nav ul li a:hover {
+            background-color: #3a9a43; /* darker green on hover */
+            color: #ffffff;
+            transform: scale(1.1); 
+        }
+
+        /* style for the current page link */
+        nav ul li a.active {
+            background-color: white;
+            color: #4CAF50;
+            font-weight: 600;
+            border: 2px solid #3a9a43;
+            border-radius: 10px;
+        }
+
+        main {
+            padding: 50px;
+            text-align: center; /* Ensures the main content is centered */
+        }
+
+        /* About Content */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto; /* Centers the content horizontally */
+            text-align: center; /* Aligns the text in the center */
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Image Styles */
+        /* .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        } */
+
+        /* Back Button */
+        .back-button button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-button button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Images/LOGICA_White.png" alt="LOGICA_Black">
+            <ul>
+                <li><a href="home.html" class="active">Contest</a></li>
+                <li><a href="allTimeLeaderboard.html">All-Time Leaderboard</a></li>
+                <li><a href="archives.html">Archives</a></li>
+                <li><a href="infoLogica.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-content">
+            <h1>About LOGICA</h1>
+            <h2>Latin Organization for Growth in Computing and Academics</h2>
+            <p>
+                <strong>Our Mission:</strong> Increasing the participation and success of students from Latinx and underrepresented communities pursuing careers in the field of computing and computer science. 
+            </p>
+            <p>
+                We are a network of students working together to develop technical, leadership, and professional skills through an environment that encourages camaraderie and growth not only as an individual, but as a community. 
+            </p>
+            <p>
+                We are an organization dedicated to inclusivity and welcome all who share our vision.
+            </p>
+        </section>
+        <figure class="about-image">
+            <img src="Images/mission-pillars-1090x461.jpg" alt="LOGICA Mission Pillars">
+        </figure><br><br>
+        <div class="back-button">
+            <button onclick="window.location.href='home.html';">Back</button>
+        </div>
+    </main>
+</body>
+</html>

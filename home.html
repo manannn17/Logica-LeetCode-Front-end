@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGICA Leetcode Contest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="Images/" style="background-repeat: no-repeat; background-size: cover;">
+    <header>
+        <nav>
+            <img src="Images/LOGICA_White.png" alt="LOGICA_Black">
+            <ul>
+                <li><a href="home.html" class="active">Contest</a></li>
+                <li><a href="allTimeLeaderboard.html">All-Time Leaderboard</a></li>
+                <li><a href="archives.html">Archives</a></li>
+                <li><a href="infoLogica.html">About</a></li>  
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="leaderboard">
+            <h1><b>Contest Leaderboard</b></h1>
+            <button id="sortButton">Sort by</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Participants</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <tr>
+                        <td><div class="team-name">Team 1</div></td>
+                        <td><div class="user-name">Adrian</div></td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td><div class="team-name">Team 2</div></td>
+                        <td><div class="user-name">Chris</div></td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td><div class="team-name">Team 3</div></td>
+                        <td><div class="user-name">M</div></td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td><div class="team-name">Team 4</div></td>
+                        <td><div class="user-name">G</div></td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td><div class="team-name">Team 5</div></td>
+                        <td><div class="user-name">Bello</div></td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="current-contest">
+            <h1>Current contest: Spring 2025</h1>
+            <button class="action-button" onclick="window.location.href='solo.html';">Enter Solo!</button>
+            <button class="action-button" onclick="window.location.href='group.html';">Enter as a group!</button>
+            <button class="info-button" onclick="window.location.href='infoLogica.html';">What is LOGICA Leetcode Contest</button>
+        </section>
+    </main>
+</body>
+
+<footer>
+    <p>© Spring 2025 LOGICA Leetcode Contest</p>
+</footer>
+<script src="script.js"></script>
+</html> 

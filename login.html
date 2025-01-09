@@ -9,14 +9,15 @@
 </head>
 <body>
 <div class="wrapper">
+    <form class="form-signin" action="home.html" method="post">
     <div class="box">
         <div class="login-box" id="login">
             <div class="headera">
                 <span>Don't have an account?<a href="#" onclick="register()">Sign Up</a></span>
-                <header>Login</header>
+                <header>Login</header> 
             </div>
             <div class="input">
-                <input type="text" class="input-field" placeholder="Email">
+                <input type="email" class="input-field" placeholder="Email">
             </div>
             <div class="input">
                 <input type="password" class="input-field" placeholder="Password">
@@ -39,7 +40,7 @@
                 <!-- <span>Have account?<a href="#" onclick="login()">Login</a></span> -->
                 <header>Sign Up</header>
             </div>
-            <div class="register-form">
+            <!-- <div class="register-form">
                 <div class="input">
                     <input type="text" class="input-field" placeholder="Firstname">
                 </div>
@@ -55,9 +56,55 @@
             </div>
             <div class="input">
                 <input type="submit" class="submitButton" value="Register">
+            </div> -->
+        
+        
+        
+            <div class="register-form">
+                <div class="input">
+                    <input
+                        type="text"
+                        class="input-field"
+                        id="Firstname"
+                        placeholder="Firstname"
+                    />
+                </div>
+                <div class="input">
+                    <input
+                        type="text"
+                        class="input-field"
+                        id="Lastname"
+                        placeholder="Lastname"
+                    />
+                </div>
+            </div>
+            <div class="input">
+                <input
+                    type="text"
+                    class="input-field"
+                    id="Email"
+                    placeholder="Email"
+                />
+            </div>
+            <div class="input">
+                <input
+                    type="password"
+                    class="input-field"
+                    id="Password"
+                    placeholder="Password"
+                />
+            </div>
+            <div class="input">
+                <input
+                    type="submit"
+                    class="submitButton"
+                    value="Register"
+                    onclick="registerUser(event)" 
+                />
             </div>
         </div>
     </div>
+    </form>
 </div>
 
 <script src="login.js"></script>

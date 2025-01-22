@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter as Group - LOGICA Leetcode Contest</title>
+    <title>About LOGICA - LOGICA Leetcode Contest</title>
     <style>
-        /* body */
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-        /* header */
+        /* Header */
         header {
             background-color: #4CAF50; 
             padding: 1rem 2rem;
@@ -24,7 +31,6 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
 
         /* navbar */
         nav {
@@ -86,68 +92,57 @@
             border-radius: 10px;
         }
 
-
         main {
-            padding: 20px;
+            padding: 50px;
+            text-align: center; /* Ensures the main content is centered */
         }
 
-        .entry-section {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* About Content */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto; /* Centers the content horizontally */
+            text-align: center; /* Aligns the text in the center */
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Image Styles */
+        /* .about-image img {
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
-        }
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        } */
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        h2 {
-            text-align: center;
-            color: #555;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        button {
-            background-color: #000;
+        /* Back Button */
+        .back-button button {
+            background-color: #333;
             color: #fff;
             border: none;
             padding: 10px 15px;
-            cursor: pointer;
             font-size: 1rem;
             border-radius: 4px;
-            display: block;
-            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        button:hover {
+        .back-button button:hover {
             background-color: #555;
         }
-
-        /* footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            margin-top: 40px;
-        } */
 
         /* Style for the dropdown menu */
         .dropdown {
@@ -229,6 +224,87 @@
             padding: 5px 10px;
         }
 
+        /* Style for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown .dropdown-toggle {
+            text-decoration: none;
+            color: white; 
+            font-size: 1rem;
+            font-weight: 600; 
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position below the dropdown toggle */
+            right: 0; /* Align with the right side of the parent */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 10;
+            min-width: 200px;
+            overflow: hidden;
+        }
+
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+            padding: 20px 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-menu li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu li a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* User header style */
+        .user-header h1 {
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 36px;
+            color: #666;
+        }
+
+        /* Footer buttons alignment */
+        .user-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -267,41 +343,31 @@
     </header>
 
     <main>
-        <section class="entry-section">
-            <h1>LOGICA Leetcode Contest</h1>
-            <h2>Enter Contest as Group</h2>
-            <form>
-                <label for="groupName">Group Name:</label>
-                <input type="text" id="groupNumber" placeholder="Enter your group Name" required>
-
-                <label for="groupLeader">Group Leader:</label>
-                <input type="text" id="groupLeader" placeholder="Enter leader's name" required>
-
-                <label for="members">Group Members:</label>
-                <textarea id="members" placeholder="Enter member names, separated by commas" required></textarea>
-
-                <label for="leetcodeId">Leetcode ID:</label>
-                <input type="text" id="leetcodeId" placeholder="Enter your Leetcode ID" required>
-
-                <label for="groupDifficulty">Difficulty:</label>
-                <select id="groupDifficulty">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-
-                <button type="submit">Enter as Group</button>
-            </form>
+        <section class="about-content">
+            <h1>About LOGICA</h1>
+            <h2>Latin Organization for Growth in Computing and Academics</h2>
+            <p>
+                <h3><strong>About this competition</strong></h3> <br><br>
+                Benifits of enhancing your problem-solving skills, 
+                solidifying your understanding of data structures and algorithms, boosting your confidence for technical interviews, 
+                and preparing you to tackle real-world coding challenges by offering a wide range of practice problems with varying 
+                difficulty levels across different programming languages 
+            </p>
+            <p>
+                We also privide you to work with a group and you can be an excellient team member that provides best logic suggestions.
+            </p>
+            <!-- <p>
+                We are an organization dedicated to inclusivity and welcome all who share our vision.
+            </p> -->
         </section>
+        <figure class="about-image">
+            <img src="Images/mission-pillars-1090x461.jpg" alt="LOGICA Mission Pillars">
+        </figure><br><br>
+        <div class="back-button">
+            <button onclick="window.location.href='home.html';">Back</button>
+        </div>
     </main>
 
-    <div class="back-button">
-        <center><button class="back" style="display: block; width: 110px;" onclick="window.location.href='home.html';">Back</button></center>
-    </div>
-
-    <!-- <footer>
-        <p>© Spring 2025 LOGICA Leetcode Contest</p>
-    </footer> -->
     <script>
         // Dropdown toggle functionality
         document.addEventListener('DOMContentLoaded', () => {

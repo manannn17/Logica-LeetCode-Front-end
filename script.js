@@ -25,3 +25,39 @@ document.getElementById("sortButton").addEventListener("click", () => {
     leaderboardBody.innerHTML = ""; // Clear existing rows
     rows.forEach(row => leaderboardBody.appendChild(row)); // Append sorted rows
 });
+
+//dropdown toggle 
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+    dropdown.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+});
+
+
+//login and profile
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownToggle.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        dropdownMenu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+});

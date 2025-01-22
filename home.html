@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGICA Leetcode Contest</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            list-style: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+    </style>
 </head>
-<body background="Images/" style="background-repeat: no-repeat; background-size: cover;">
+<body>
     <header>
         <nav>
             <img src="Images/LOGICA_White.png" alt="LOGICA_Black">
@@ -14,7 +29,26 @@
                 <li><a href="home.html" class="active">Contest</a></li>
                 <li><a href="allTimeLeaderboard.html">All-Time Leaderboard</a></li>
                 <li><a href="archives.html">Archives</a></li>
-                <li><a href="infoLogica.html">About</a></li>  
+                <li><a href="about.html">About</a></li>  
+                
+                <!-- user profile -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" style="font-family: 'Poppins', sans-serif;">Profile</a>
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <h1><center>M</center></h1>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                          <div class="pull-left">
+                            <a href="profile.html" class="btn btn-default btn-flat" style="font-family: 'Poppins', sans-serif;">Profile</a>
+                          </div>
+                          <div class="pull-right">
+                            <a href="login.html" class="btn btn-default btn-flat" style="font-family: 'Poppins', sans-serif;">Logout</a>
+                          </div>
+                        </li>
+                      </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -26,9 +60,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Participants</th>
-                        <th>Score</th>
+                        <center><th>Name</th></center>
+                        <center><th>Participants</th></center>
+                        <center><th>Score</th></center>
                     </tr>
                 </thead>
                 <tbody id="leaderboardBody">
@@ -68,10 +102,26 @@
             <button class="info-button" onclick="window.location.href='infoLogica.html';">What is LOGICA Leetcode Contest</button>
         </section>
     </main>
-</body>
 
-<footer>
-    <p>© Spring 2025 LOGICA Leetcode Contest</p>
-</footer>
-<script src="script.js"></script>
-</html> 
+    <footer>
+        <p>© Spring 2025 LOGICA Leetcode Contest</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+
+            dropdownToggle.addEventListener("click", (e) => {
+                e.preventDefault(); // Prevent default link behavior
+                dropdownMenu.classList.toggle("show");
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target)) {
+                    dropdownMenu.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

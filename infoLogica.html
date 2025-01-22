@@ -143,6 +143,168 @@
         .back-button button:hover {
             background-color: #555;
         }
+
+        /* Style for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown .dropdown-toggle {
+            text-decoration: none;
+            color: white; 
+            font-size: 1rem;
+            font-weight: 600; 
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position below the dropdown toggle */
+            right: 0; /* Align with the right side of the parent */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 10;
+            min-width: 200px;
+            overflow: hidden;
+        }
+
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+            padding: 20px 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-menu li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu li a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* User header style */
+        .user-header h1 {
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 36px;
+            color: #666;
+        }
+
+        /* Footer buttons alignment */
+        .user-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+        }
+
+        /* Style for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown .dropdown-toggle {
+            text-decoration: none;
+            color: white; 
+            font-size: 1rem;
+            font-weight: 600; 
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position below the dropdown toggle */
+            right: 0; /* Align with the right side of the parent */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 10;
+            min-width: 200px;
+            overflow: hidden;
+        }
+
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+            padding: 20px 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-menu li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu li a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* User header style */
+        .user-header h1 {
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 36px;
+            color: #666;
+        }
+
+        /* Footer buttons alignment */
+        .user-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -154,6 +316,28 @@
                 <li><a href="allTimeLeaderboard.html">All-Time Leaderboard</a></li>
                 <li><a href="archives.html">Archives</a></li>
                 <li><a href="infoLogica.html">About</a></li>
+
+                <!-- user profile -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="hidden-xs">Profile</span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <h1><center>M</center></h1>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                          <div class="pull-left">
+                            <a href="profile.html" class="btn btn-default btn-flat">Profile</a>
+                          </div>
+                          <div class="pull-right">
+                            <a href="login.html" class="btn btn-default btn-flat"> Logout</a>
+                          </div>
+                        </li>
+                      </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -179,5 +363,25 @@
             <button onclick="window.location.href='home.html';">Back</button>
         </div>
     </main>
+
+    <script>
+        // Dropdown toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            
+            dropdown.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

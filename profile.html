@@ -240,50 +240,23 @@
                 <li><a href="allTimeLeaderboard.html">All-Time Leaderboard</a></li>
                 <li><a href="archives.html">Archives</a></li>
                 <li><a href="about.html">About</a></li>
-
-                <!-- User profile -->
-                <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" id="profileToggle">
-                        <span class="hidden-xs">Profile</span>
-                    </a>
-                    <ul class="dropdown-menu" id="profileDropdown">
-                        <li class="user-header">
-                            <h1><center>M</center></h1>
-                        </li>
-                        <!-- Menu Footer -->
-                        <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="profile.html" class="btn btn-default btn-flat">Profile</a>
-                            </div>
-                            <div class="pull-right">
-                                <a href="login.html" class="btn btn-default btn-flat">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="entry-section">
-            <h1>LOGICA Leetcode Contest</h1>
-            <h2>Enter Contest as Solo</h2>
+            <h1>Edit Profile</h1>
+            <!-- <h2>Enter Contest as Solo</h2> -->
             <form action="problems.html">
-                <label for="displayName">Display Name:</label>
-                <input type="text" id="displayName" placeholder="Enter your display name" required>
+                <label for="displayName">Name:</label>
+                <input type="text" id="displayName" placeholder="Upadte your display name" required>
 
-                <label for="leetcodeId">Leetcode ID:</label>
-                <input type="text" id="leetcodeId" placeholder="Enter your Leetcode ID" required>
+                <label for="displayName">Email:</label>
+                <input type="email" id="displayEmail" placeholder="Upadte your display email" required>
 
-                <label for="difficulty">Difficulty:</label>
-                <select id="difficulty">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
                 
-                <button type="submit">Enter Solo</button>
+                <button type="submit">Update</button>
             </form>
         </section>
     </main>
